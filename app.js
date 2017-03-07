@@ -42,7 +42,7 @@ app.get('/', function (req, res) {
 });
 
 const people = [{name: 'Full'}, {name: 'Stacker'}, {name: 'Son'}];
-const fillIns = {title: 'Hall of Fame', people: people};
+const fillIns = {title: 'Hall of Fame', people: people, copywrite: "Jodie&Stef"};
 app.get('/halloffame', function (req, res) {
   res.render('index.html', fillIns);
 });
