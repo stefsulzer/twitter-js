@@ -17,8 +17,9 @@
       <!-- display tweets here -->
       <h3>All Tweets</h3>
       {% for tweet in tweets %}
-        <h4>{{tweet.name}}</h4>
-        <li>{{tweet.content}}</li>
+      <li><a href="/users/{{tweet.name}}">{{tweet.name}}</a> - {{tweet.content}}</li>
+        <!--<h4>{{tweet.name}}</h4>
+        <li>{{tweet.content}}</li>-->
       {% endfor %}
 
     </div>

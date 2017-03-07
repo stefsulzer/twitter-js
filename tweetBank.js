@@ -4,7 +4,11 @@ const _ = require('lodash');
 var data = [];
 
 function add (name, content) {
-  data.push({ name: name, content: content });
+    if (!data[name]) { data.push({ name: name, content: [content] }); }
+    else { 
+        find(name)[contents].push(content);
+    };
+
 }
 
 function list () {
@@ -36,7 +40,7 @@ for (let i = 0; i < 10; i++) {
   module.exports.add( getFakeName(), getFakeTweet() );
 }
 
-// add('Jodie Ly', 'this is my tweet!')
+add('Jodie Ly', 'this is my tweet!')
 // var filter = find();
 
 // console.log(data);
